@@ -425,6 +425,19 @@ h3 { font-size: 1.8rem; }
     color: rgba(255, 255, 255, 0.7);
 }
 
+.footer-bottom>p{
+    padding-bottom: 20px;
+}
+
+#linkfoot{
+    text-decoration: none;
+    color: var(--secondary-dark);
+}
+
+#linkfoot:hover{
+    color: var(--accent-gold);
+}
+
 /* Final CTA */
 .final-cta {
     background: linear-gradient(135deg, var(--accent-gold), #B8941F);
@@ -521,5 +534,75 @@ h3 { font-size: 1.8rem; }
 @media (max-width: 480px) {
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Adicionando responsividade para o link de reservas */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+    
+    /* Ajustar o botão de reservas em telas mobile */
+    .btn-primary {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    
+    /* Garantir espaçamento entre hambúrguer e reservas */
+    .mobile-menu-toggle {
+        margin-right: 1rem;
+        order: 2;
+    }
+    
+    /* Reordenar elementos no container */
+    .nav-container .btn-primary {
+        order: 1;
+    }
+    
+    .logo {
+        order: 0;
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .btn-primary {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .mobile-menu-toggle {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .nav-container {
+        padding: 0 0.25rem;
+    }
+    
+    .btn-primary {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .mobile-menu-toggle {
+        font-size: 1.2rem;
     }
 }
